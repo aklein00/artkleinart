@@ -234,6 +234,20 @@ h1.page-title:first-child { margin-top: 0; }
   margin-bottom: 20px;
 }
 
+h3.subsection-header {
+  font-size: 13px;
+  font-weight: 600;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 32px;
+  margin-bottom: 6px;
+}
+hr.section-rule {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin: 32px 0 28px;
+}
 h2.section-header {
   font-size: 14px;
   font-weight: 600;

@@ -1,0 +1,6 @@
+# Planning notes — local only
+planning/
+
+# macOS
+.DS_Store
+src/favicon_source.psd

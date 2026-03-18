@@ -40,8 +40,8 @@
   <main class="page-content">
 
     <p class="description" style="margin-top: 0; margin-bottom: 40px; max-width: 760px;">
-      These are solo projects built using AI-accelerated pipelines — Cursor, ComfyUI, and Stable Diffusion.
-      Some are prototypes for games I coded myself. Some are pure visual development:
+      These are solo projects built using traditional and AI-accelerated pipelines — Cursor, ComfyUI, Claude Code, and others.
+      Some are prototypes for games. Some are pure visual development:
       character systems, brand identity, and art direction done without a team or a brief.
       The playable versions live at <a href="https://utilityinfielder.com" target="_blank" rel="noopener">utilityinfielder.com</a>.
     </p>
@@ -247,6 +247,357 @@
         <img src="images/aidrawings_lacan.png" alt="Jacques Lacan — AI illustrated portrait" loading="lazy">
         <div class="img-caption-overlay">Lacan</div>
       </figure>
+
+    </div>
+
+    <hr class="divider">
+
+    <!-- ── Task Briefs ──────────────────────────────────────── -->
+    <h1 class="page-title">Task Briefs</h1>
+    <div class="project-meta">Art Direction Writing Samples</div>
+
+    <p class="description">
+      Art direction writing samples — task briefs written for real game art workflows.
+      Each one represents the handoff between an lead artist and a contract artist or external partner.
+      The brief provides a clear creative prompt, defined starting materials, technical constraints, and a specific deliverable list.
+    </p>
+
+    <!-- ── 3D Briefs ──────────────────────────────────────────── -->
+    <div class="row-label">3D Briefs</div>
+
+    <div class="brief-grid">
+
+      <!-- 001 Kitchen Set Dressing -->
+      <details class="brief-card">
+        <summary>
+          <div class="brief-card-header">
+            <h2 class="brief-card-title">Kitchen Set Dressing</h2>
+            <div class="brief-tags">
+              <span class="brief-tag">Blender</span>
+              <span class="brief-tag">Scene Composition</span>
+            </div>
+            <p class="brief-card-summary">Dress a game kitchen scene using 34 pre-made assets. Placement and composition only — no asset modification.</p>
+          </div>
+          <span class="brief-chevron"></span>
+        </summary>
+        <div class="brief-body">
+          <div class="brief-meta">
+            <span><strong>Task type:</strong> Additional work on existing project</span>
+            <span><strong>Application:</strong> Blender</span>
+            <span><strong>Duration:</strong> 3 hours</span>
+          </div>
+
+          <div class="brief-imgs">
+            <img src="images/briefs/brief_001_corner.png" alt="Kitchen scene reference — corner view" loading="lazy">
+            <img src="images/briefs/brief_001_assets.png" alt="Kitchen asset inventory — 34 props" loading="lazy">
+          </div>
+
+          <h3>Task Prompt</h3>
+          <p>You're dressing a kitchen scene for a casual cooking game. The goal is a complete, game-engine-ready set that feels like an active kitchen — functional, charming, and ready to drop into a prototype.</p>
+          <p>A starting .blend file contains 34 kitchen assets (32 models, 2 materials) organized into collections. Use them as-is. Do not modify asset geometry, materials, or UV maps. Your job is placement and scene composition only.</p>
+          <p>The reference image (001_KitchenBeautifulCorner.png) shows one possible arrangement — treat it as inspiration for spatial feel and prop density, not a layout you need to match. The asset lineup (001_KitchenSetDressing_AssetsLineup.png) is your inventory. You don't need to use every asset, but the scene should feel dressed and complete. Every major surface area — counters, floor, walls — should have intentional placement.</p>
+          <p>The scene does not need to be lit or rendered. All deliverables are for game-engine import review and viewport screenshots only.</p>
+
+          <h4>Deliverables</h4>
+          <ul>
+            <li><code>001_KitchenSetDressing.blend</code> — all transforms applied (location, rotation, scale), all external data packed, collections organized, objects named</li>
+            <li><code>001_KitchenSetDressing_Ortho.png</code> — orthographic viewport color screenshot</li>
+            <li><code>001_KitchenSetDressing_TopDown.png</code> — top-down viewport color screenshot</li>
+            <li><code>001_KitchenSetDressing_Wireframe.png</code> — wireframe viewport screenshot</li>
+          </ul>
+
+          <h3>Starting State</h3>
+          <p>The starting .blend file contains all 34 kitchen assets pre-imported and organized into three collections: Architecture (room shell, cabinets, floor, windows), Furnishings (table, open shelving), and Objects (all loose props — appliances, food, utensils, containers). Objects are named. No scene arrangement has been done — placement is your task.</p>
+
+          <h3>Overall Context</h3>
+          <p>This is a proof-of-concept set for a casual cooking game in early prototyping. The output will be reviewed by stakeholders and used as a rough layout reference before full production begins. Visual clarity and a convincing spatial read matter more than polish. The asset style is fixed — it ships as-is.</p>
+
+          <div class="brief-files">
+            <strong>Reference files:</strong> 001_KitchenBeautifulCorner.png, 001_KitchenSetDressing_AssetsLineup.png<br>
+            <strong>Starting state:</strong> 001_KitchenSetDressing_Assets.blend
+          </div>
+        </div>
+      </details>
+
+      <!-- 002 Sneaker Retopologize -->
+      <details class="brief-card">
+        <summary>
+          <div class="brief-card-header">
+            <h2 class="brief-card-title">Sneaker Retopologize</h2>
+            <div class="brief-tags">
+              <span class="brief-tag">Blender</span>
+              <span class="brief-tag">Retopology</span>
+            </div>
+            <p class="brief-card-summary">Build clean game-ready topology over a high-res sneaker sculpt, targeting under 2,500 triangles.</p>
+          </div>
+          <span class="brief-chevron"></span>
+        </summary>
+        <div class="brief-body">
+          <div class="brief-meta">
+            <span><strong>Task type:</strong> Retopology of provided asset</span>
+            <span><strong>Application:</strong> Blender</span>
+            <span><strong>Duration:</strong> 4 hours</span>
+          </div>
+
+          <div class="brief-imgs">
+            <img src="images/briefs/brief_002_sneaker.png" alt="High-res sneaker sculpt in Blender" loading="lazy">
+            <img src="images/briefs/brief_002_laces.png" alt="Lace zone — tangled high-res geometry to avoid tracing" loading="lazy">
+          </div>
+
+          <h3>Task Prompt</h3>
+          <p>The high-res sculpt exists. Your job is to build clean game topology over it. This is a sneaker, and it's going into a stylized console title — think Fortnite, Valorant, or League of Legends. That means readable silhouette, efficient geometry, and no wasted polygons chasing detail the normal map will handle.</p>
+          <p>The retopology should respect the shoe's major zones: sole and midsole, toe cap, upper, tongue, collar, and lace area. These don't need to be separate objects. But the edge loop structure should reflect the transitions between them — in wireframe, a reviewer should be able to see where one zone ends and another begins.</p>
+          <p>Target is under 2,500 triangles for the full shoe. Quads throughout, with triangles only where the topology genuinely demands it. No n-gons.</p>
+          <p>The lace crossing area in the high-res has messy, tangled geometry — an artifact of how the laces were generated. Do not trace it. Retopologize the lace zone with clean, intentional loops that describe the lace forms as they should read, not as the high-res data happens to be. The silhouette and general form of the laces should still match, but the underlying topology should be clean.</p>
+          <p>The output needs to be bake-ready. A normal map bake from the high-res to this retopo isn't part of this task, but the topology has to be clean enough that it would work without major artifacts — no extreme stretching, no pinching across primary surfaces, poles placed away from silhouette edges.</p>
+
+          <h4>Deliverables</h4>
+          <ul>
+            <li><code>002_SneakerRetopologize.blend</code> — retopo mesh complete, high-res in a separate hidden collection, all transforms applied</li>
+            <li><code>002_SneakerRetopologize_Wireframe_Front.png</code> — wireframe viewport, front orthographic view</li>
+            <li><code>002_SneakerRetopologize_Wireframe_Side.png</code> — wireframe viewport, lateral orthographic view</li>
+            <li><code>002_SneakerRetopologize_Shaded.png</code> — smooth shaded viewport, 3/4 view</li>
+          </ul>
+
+          <h3>Starting State</h3>
+          <p>The starting .blend file contains one object: a high-resolution sneaker sculpt. It's a full shoe — not split into zones or separate meshes. Transforms are applied. No UVs. Use it as your retopology reference only. Do not modify or delete it.</p>
+
+          <h3>Overall Context</h3>
+          <p>This is a pipeline evaluation for game-ready asset production. The reviewer will check wireframe topology for zone clarity and flow, triangle count, silhouette match against the high-res, and shading quality. A strong result looks efficient in wireframe and reads identically to the sculpt in silhouette from any angle.</p>
+
+          <div class="brief-files">
+            <strong>Reference files:</strong> 002_SneakerRetopologize_StyleRef_Fortnite.png, 002_SneakerRetopologize_StyleRef_Valorant.png<br>
+            <strong>Starting state:</strong> 002_SneakerRetopologize_HighRes.blend
+          </div>
+        </div>
+      </details>
+
+      <!-- B004 Material Variations -->
+      <details class="brief-card">
+        <summary>
+          <div class="brief-card-header">
+            <h2 class="brief-card-title">Material Variations</h2>
+            <div class="brief-tags">
+              <span class="brief-tag">Blender</span>
+              <span class="brief-tag">Procedural PBR</span>
+            </div>
+            <p class="brief-card-summary">Create four procedural PBR material themes for an armchair using Shader Nodes. No imported textures.</p>
+          </div>
+          <span class="brief-chevron"></span>
+        </summary>
+        <div class="brief-body">
+          <div class="brief-meta">
+            <span><strong>Task type:</strong> Material design and PBR variation</span>
+            <span><strong>Application:</strong> Blender</span>
+            <span><strong>Duration:</strong> 4 hours</span>
+          </div>
+
+          <div class="brief-imgs">
+            <img src="images/briefs/brief_b004_original.png" alt="Armchair model — starting state" loading="lazy">
+            <img src="images/briefs/brief_b004_concepts.png" alt="Four material theme targets: Worn, Opulent, Retro, Coastal" loading="lazy">
+          </div>
+
+          <h3>Task Prompt</h3>
+          <p>You're creating four distinct material themes for an armchair using Blender's shader node editor. The model and its original materials are provided — your job is entirely materials.</p>
+          <p>The chair has three zones: the upholstered seat, the leather outer shell, and the metal base. Create four complete material sets — <strong>Worn</strong>, <strong>Opulent</strong>, <strong>Retro</strong>, and <strong>Coastal</strong> — each with its own version of all three zones. Build every material using Principled BSDF with procedural textures. No imported textures. No modeling changes. No UV work.</p>
+          <p>Each material should have real surface character — not just a color change. Use roughness, bump (via Noise or Voronoi nodes), and color together to make the seat feel like fabric, the shell feel like leather, and the base feel like metal. The Worn seat and the Opulent seat should read differently in how light hits the surface, not just in hue.</p>
+          <p>Create four themed variants of the chair — one per theme — and arrange them in a single scene. A render script — <code>B004_render_setup.py</code> — is included with this task. To render each variant, hide the original chair and the other three themed variants so only the active theme is visible. Load the provided script into Blender's Text Editor, set <code>OUTPUT_PATH</code> to the appropriate filename (e.g. <code>"//B004_Worn.png"</code>), and run it. The script handles camera, lighting, and render settings. Repeat for each of the four themes.</p>
+
+          <h4>Deliverables</h4>
+          <ul>
+            <li><code>B004_MaterialVariations.blend</code> — all four variants in the scene, organized into collections named by theme, materials named clearly by zone and theme</li>
+            <li><code>B004_Worn.png</code>, <code>B004_Opulent.png</code>, <code>B004_Retro.png</code>, <code>B004_Coastal.png</code> — one render per theme at 1080x1080, neutral grey background, consistent camera and lighting across all four</li>
+          </ul>
+
+          <h3>Starting State</h3>
+          <p>A Blender file with a single armchair model. Three materials are already assigned: seat upholstery, leather outer shell, and metal base. No lighting or camera is set up. A render script (<code>B004_render_setup.py</code>) is included with this task — use it for all renders. You are responsible for material creation, scene duplication, and organizing the final file.</p>
+
+          <h3>Overall Context</h3>
+          <p>This is a material design evaluation. Output will be reviewed for how convincingly each theme reads across all three zones, and whether the node-based PBR materials demonstrate real surface character — believable fabric, leather, and metal — rather than flat color swaps. Each of the four themes should be immediately recognizable at a glance.</p>
+
+          <div class="brief-files">
+            <strong>Reference files:</strong> B004_armchair_original.png<br>
+            <strong>Starting state:</strong> B004_MaterialVariations.blend<br>
+            <strong>Provided scripts:</strong> B004_render_setup.py
+          </div>
+        </div>
+      </details>
+
+    </div>
+
+    <!-- ── 2D Briefs ──────────────────────────────────────────── -->
+    <div class="row-label" style="margin-top: 40px;">2D Briefs</div>
+
+    <div class="brief-grid">
+
+      <!-- G002 Blouse Variations -->
+      <details class="brief-card">
+        <summary>
+          <div class="brief-card-header">
+            <h2 class="brief-card-title">Blouse Variations</h2>
+            <div class="brief-tags">
+              <span class="brief-tag">GIMP</span>
+              <span class="brief-tag">Texture Variants</span>
+            </div>
+            <p class="brief-card-summary">Create three distinct fabric variations for a game blouse: floral, geometric, and denim.</p>
+          </div>
+          <span class="brief-chevron"></span>
+        </summary>
+        <div class="brief-body">
+          <div class="brief-meta">
+            <span><strong>Task type:</strong> Additional work on existing asset</span>
+            <span><strong>Application:</strong> GIMP</span>
+            <span><strong>Duration:</strong> 4 hours</span>
+          </div>
+
+          <div class="brief-imgs">
+            <img src="images/briefs/brief_g002_texture.png" alt="Base blouse texture — UV layout" loading="lazy">
+            <img src="images/briefs/brief_g002_ingame.png" alt="In-game concept showing denim, floral, and geometric variants" loading="lazy">
+          </div>
+
+          <h3>Task Prompt</h3>
+          <p>This is a task to create texture/color variations for a video game blouse asset. The base blouse is done: indigo fabric, red floral print, UV-unwrapped and ready. Now it needs a wardrobe. The character will have three alternate fabric options, each a distinct look from the others and from the original.</p>
+          <p>The three variants are a different floral, a geometric, and a denim.</p>
+          <p>The floral should feel like a different garment. Different motif, different color, different energy from the original. It's not a recolor of what's already there.</p>
+          <p>The geometric is a pattern built from shapes. Stripes, tiles, a grid, a diamond repeat. Your call on what works. It should feel deliberate and read cleanly at game texture resolution.</p>
+          <p>The denim is a fabric interpretation, not a flat fill. Wash, weave, subtle fading, stitching detail — the character of the material is yours to decide. Light wash, dark indigo, worn and distressed, or clean and structured. It should read as denim at a glance.</p>
+          <p>For all three variants, paint the pattern or fabric directly in GIMP or work from stock photography as a base. Either approach is fine. The result needs to be game-ready: clean at texture resolution, no obvious tiling artifacts, no dirty edges at UV borders.</p>
+          <p>The Blender file is included if you want to see how the texture reads on the model.</p>
+
+          <h4>Deliverables</h4>
+          <ul>
+            <li><code>G002_BlouseVariations.xcf</code> — working file with each variant in its own clearly named layer group, original preserved</li>
+            <li><code>G002_BlouseVariations_Floral.png</code> — flattened export, matching the base texture resolution</li>
+            <li><code>G002_BlouseVariations_Geometric.png</code> — flattened export, matching the base texture resolution</li>
+            <li><code>G002_BlouseVariations_Denim.png</code> — flattened export, matching the base texture resolution</li>
+          </ul>
+
+          <h3>Starting State</h3>
+          <p>Open <code>G002_BlouseVariations.xcf</code> in GIMP. The file contains the base blouse texture laid out as a UV unwrap. The pattern and background are on separate layers. <code>gimp_layers.png</code> shows the current layer structure for reference.</p>
+          <p><code>DG100284diffuse1001png.png</code> is a flat PNG of the base texture.</p>
+          <p><code>G002_BlouseVariations.blend</code> contains the character model with this texture applied. Open it in Blender if you want to preview how your variants read on the mesh. This is optional.</p>
+
+          <h3>Overall Context</h3>
+          <p>This is a texture variant task for a game character. The reviewer will check that each variant reads as a distinct, intentional fabric design at game texture resolution, that the XCF is cleanly organized with the original preserved, and that the exports are correctly named and match the base texture resolution.</p>
+
+          <div class="brief-files">
+            <strong>Reference files:</strong> gimp_layers.png, DG100284diffuse1001png.png<br>
+            <strong>Starting state:</strong> G002_BlouseVariations.xcf<br>
+            <strong>Optional:</strong> G002_BlouseVariations.blend
+          </div>
+        </div>
+      </details>
+
+      <!-- G003 Foliage Alpha -->
+      <details class="brief-card">
+        <summary>
+          <div class="brief-card-header">
+            <h2 class="brief-card-title">Foliage Alpha</h2>
+            <div class="brief-tags">
+              <span class="brief-tag">GIMP</span>
+              <span class="brief-tag">Visual Dev / Game Assets</span>
+            </div>
+            <p class="brief-card-summary">Design four distinct hand-painted leaf cards for a stylized game tree, each genuinely different.</p>
+          </div>
+          <span class="brief-chevron"></span>
+        </summary>
+        <div class="brief-body">
+          <div class="brief-meta">
+            <span><strong>Task type:</strong> Task from scratch</span>
+            <span><strong>Application:</strong> GIMP</span>
+            <span><strong>Duration:</strong> 4 hours</span>
+          </div>
+
+          <div class="brief-imgs">
+            <img src="images/briefs/brief_g003_tree.png" alt="Reference tree — existing hand-painted style" loading="lazy" class="contain">
+            <img src="images/briefs/brief_g003_concepts.png" alt="Six leaf form variations A–F for exploration" loading="lazy">
+          </div>
+
+          <h3>Task Prompt</h3>
+          <p>This is a visual development task for a stylized game tree. The goal is four foliage cards — each one a different take on what a leaf card for this tree could be.</p>
+          <p>The reference (leaf_original.png) shows you where the style lives. The existing tree uses a flat, layered, hand-painted approach. Your cards don't need to match it. They're exploring what else this tree could be. Different shapes, different color directions. What reads well as a billboard quad in a game environment, what feels worth pursuing.</p>
+          <p>Each card should feel distinct from the others in shape, color, and complexity. Not four variations on the same idea — four genuinely different directions.</p>
+          <p>Paint four cards. Deliver each with a clean alpha channel on a transparent background, ready for use as a billboard quad.</p>
+
+          <h4>Deliverables</h4>
+          <ul>
+            <li><code>frond_01.png</code> — 1024x1024 RGBA, clean alpha</li>
+            <li><code>frond_02.png</code> — 1024x1024 RGBA, clean alpha</li>
+            <li><code>frond_03.png</code> — 1024x1024 RGBA, clean alpha</li>
+            <li><code>frond_04.png</code> — 1024x1024 RGBA, clean alpha</li>
+            <li><code>G003_FoliageAlpha.xcf</code> — working file with layers organized and named by card</li>
+          </ul>
+
+          <h3>Starting State</h3>
+          <p>No project file. Starting from scratch in GIMP.</p>
+          <p>The reference folder contains three files. <code>leaf_original.png</code> is a painted stylized tree showing the hand-painted aesthetic and the color and layering approach used in the original. <code>leaf_concepts.png</code> shows six different leaf form variations, labeled A through F, as shape inspiration. <code>LeafCards_blender.png</code> shows how foliage cards are used as billboard quads on a 3D tree in-engine — useful context for how these textures will actually be applied.</p>
+          <p>The reference files are for reference only — not a base to paint over. Each card should be painted from scratch.</p>
+
+          <h3>Overall Context</h3>
+          <p>Foliage card painting is a standard part of game environment and character art pipelines. Artists paint leaf cards that get applied as flat billboard quads on 3D tree meshes — it's how most stylized game trees are built. This task reflects the visual development phase of that process, where an artist explores different card directions before a final style is locked. The reviewer will evaluate whether the four cards are distinct from one another, read well as stylized game foliage, and are technically clean for in-engine use.</p>
+
+          <div class="brief-files">
+            <strong>Reference files:</strong> leaf_original.png, leaf_concepts.png, LeafCards_blender.png
+          </div>
+        </div>
+      </details>
+
+      <!-- G013 Apparel Mockups -->
+      <details class="brief-card">
+        <summary>
+          <div class="brief-card-header">
+            <h2 class="brief-card-title">Apparel Mockups</h2>
+            <div class="brief-tags">
+              <span class="brief-tag">GIMP</span>
+              <span class="brief-tag">Merch Concept / Graphic Design</span>
+            </div>
+            <p class="brief-card-summary">Build a six-piece merch line for a fantasy sports brand. Streetwear-adjacent, skate-influenced, punk-sports edge.</p>
+          </div>
+          <span class="brief-chevron"></span>
+        </summary>
+        <div class="brief-body">
+          <div class="brief-meta">
+            <span><strong>Task type:</strong> Task from scratch</span>
+            <span><strong>Application:</strong> GIMP</span>
+            <span><strong>Duration:</strong> 5 hours</span>
+          </div>
+
+          <div class="brief-imgs">
+            <img src="images/briefs/brief_g013_photo.png" alt="Merch line target — full lineup on mannequins" loading="lazy">
+            <img src="images/briefs/brief_g013_logo.png" alt="Sportsball Fantasy logo — skull in football helmet, crossed bats" loading="lazy" class="contain">
+          </div>
+
+          <h3>Task Prompt</h3>
+          <p>Sportsball Fantasy is a fantasy sports app company that wants a merch line. The brief is streetwear-adjacent, skate-influenced, wearable. Thrasher magazine energy, not team store energy. The logo is already there: skull in a football helmet, crossed bats, lightning, attitude built in. The garments should match it without going over the top.</p>
+          <p>Six pieces: a t-shirt, hoodie, crewneck sweater, cardigan, cap, and beanie. Each one gets a mockup built over the provided flat technical drawing base. These are concept mockups, not production-ready artwork. Image manipulation is the workflow: fill the garment with color, composite the logo and any supporting graphics, make the design decisions that turn six blank templates into a cohesive merch line.</p>
+          <p>Think about colorways that let the logo land. Think about where graphics live on each piece, what placement makes sense for that garment. A chest hit on the tee, a full back graphic on the hoodie, a front panel on the cap — there's room to make those calls. The cardigan has structure to work with: the button band, pockets, and ribbed trim are all real estate. Supporting graphics are welcome if they pull the line together. Keep the palette tight across all six so they read as a family.</p>
+          <p>The aesthetic is modern streetwear with a punk-sports edge. Wearable, not costumy. Something someone would actually buy.</p>
+
+          <h4>Deliverables</h4>
+          <ul>
+            <li><code>G013_Tshirt.xcf</code>, <code>G013_Hoodie.xcf</code>, <code>G013_Cap.xcf</code>, <code>G013_Beanie.xcf</code>, <code>G013_Crewneck.xcf</code>, <code>G013_Cardigan.xcf</code> — working files, garment fill and graphics on organized layers, line art preserved on top</li>
+            <li><code>G013_Tshirt.png</code>, <code>G013_Hoodie.png</code>, <code>G013_Cap.png</code>, <code>G013_Beanie.png</code>, <code>G013_Crewneck.png</code>, <code>G013_Cardigan.png</code> — flat PNG exports, transparent or white background</li>
+          </ul>
+
+          <h3>Reference Images</h3>
+          <p><code>ref_apparelMockupsPhoto.png</code> — A photo-style mockup showing a full merch line displayed on mannequins: cap, beanie, t-shirt, hoodie, crewneck, and cardigan together. Use this as a target for how the line should read as a cohesive set — colorway consistency, graphic placement, and overall presentation.</p>
+          <p><code>ref_sampleApparelDrawings.png</code> — A flat technical drawing with graphics composited over the base, showing the expected output format for this task. The line art base is preserved, fills and graphics sit underneath it, and the result reads as a finished mockup drawing rather than a photo.</p>
+
+          <h3>Starting State</h3>
+          <p>Six flat technical drawing base files are provided, one per apparel type. These are clean black line illustrations showing front, back, and side views (single view for the beanie). They're the blank canvas.</p>
+          <p><code>sportsballFantasy_logo.png</code> is the Sportsball Fantasy brand logo. It's the primary graphic element across all six pieces.</p>
+          <p>Open a drawing base in GIMP to start each piece. Keep the line art on a top layer so it reads over your fills and graphics.</p>
+
+          <h3>Overall Context</h3>
+          <p>This is a merchandise concept package for a fantasy sports app. The mockups are for internal review and potential use on the company's website. The reviewer will check that the logo reads clearly on every piece, that all six items feel like a cohesive line, and that the aesthetic hits the brief: modern streetwear with a skate and punk-sports edge. This is concept and image manipulation work, not vector production.</p>
+
+          <div class="brief-files">
+            <strong>Starting state:</strong> tshirt_base.png, hoodie_base.png, cap_base.png, beanie_base.png, crewneck_base.png, cardigan_base.png<br>
+            <strong>Logo:</strong> sportsballFantasy_logo.png<br>
+            <strong>Reference:</strong> ref_apparelMockupsPhoto.png, ref_sampleApparelDrawings.png
+          </div>
+        </div>
+      </details>
 
     </div>
 

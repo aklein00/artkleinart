@@ -327,6 +327,17 @@ h2.section-header {
   display: block;
   border-radius: 3px;
 }
+.video-card .video-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.video-card .video-embed iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: 0;
+}
 .video-card .img-caption-overlay {
   position: absolute;
   bottom: 0;

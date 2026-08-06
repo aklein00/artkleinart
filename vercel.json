@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/cg001-image.js": {
+      "includeFiles": "protected-assets/company-game-001/**"
+    }
+  }
+}

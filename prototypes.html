@@ -112,30 +112,29 @@
           <dl class="case-proof">
             <div class="case-proof-row">
               <dt>Decision</dt>
-              <dd>Plan the work as usable increments and hold the full visual-polish pass until the core search, radius, and AI-curation flow worked end to end.</dd>
+              <dd>Ship each slice as something you can actually use. Hold the polish pass until search, radius, and AI picks work end to end.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Shipped result</dt>
-              <dd>A live mobile-ready flow with Places data, preference filters, AI-curated recommendations, and a Vercel proxy that keeps the Gemini credential out of client code.</dd>
+              <dd>A live, phone-ready flow: pick a place, set the vibe and radius, get a short list of AI-curated date ideas. API keys stay on the server.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Deferred</dt>
-              <dd>The planned Phase 4 polish backlog — richer loading states, micro-interactions, and a mobile results sheet — remained outside the core release.</dd>
+              <dd>Richer loading states, micro-interactions, and a mobile results sheet. Nice to have — not needed for the first release.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Next release</dt>
-              <dd>Complete the bounded Phase 4 UX-polish backlog without reopening the app's core scope.</dd>
+              <dd>Finish that polish backlog without reopening the core product.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Evidence</dt>
-              <dd>The five-phase milestone plan states “ship each phase as a usable increment”; the proxy commit and reusable Vercel guide document the public-release boundary.</dd>
+              <dd>Open DateLight — you can go from “where?” to a short list of date ideas in under a minute.</dd>
             </div>
           </dl>
           <div class="product-tags">
             <span class="product-tag">AI curation</span>
             <span class="product-tag">Maps</span>
             <span class="product-tag">PWA</span>
-            <span class="product-tag">Vercel Functions</span>
           </div>
           <div class="case-actions">
             <a class="btn" href="https://datelight.utilityinfielder.com" target="_blank" rel="noopener">Try DateLight</a>
@@ -144,7 +143,6 @@
 
         <figure class="case-media">
           <img src="images/product-studio/datelight-mark.webp" alt="DateLight glowing heart-shaped lightbulb app icon" width="900" height="502" loading="lazy">
-          <figcaption>The public release received a compact PWA identity so the utility could live on a phone, not only in a browser tab.</figcaption>
         </figure>
       </div>
     </section>
@@ -166,23 +164,23 @@
           <dl class="case-proof">
             <div class="case-proof-row">
               <dt>Decision</dt>
-              <dd>Use a web-native Three.js stack instead of a full game engine so the runner could stay lightweight, deploy directly to the browser, and own its rendering pipeline.</dd>
+              <dd>Build it in the browser with Three.js instead of a full game engine — lighter, deploys as a webpage, and I own how it looks.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Shipped result</dt>
-              <dd>A playable browser runner with pooled world objects, lane movement, collision tuning, and a custom GPU shader that spreads color through the city.</dd>
+              <dd>A playable endless runner with lane movement, collisions, and a color-spread effect that paints the grey city as you run.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Deferred</dt>
-              <dd>The custom GLB asset pass and horn-drill polish were explicitly moved to optional Phase 7 rather than blocking the beta.</dd>
+              <dd>Custom character assets and horn-drill polish. Saved for later so the beta could ship.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Next release</dt>
-              <dd>Expand the single-city run into the documented multi-zone structure: suburbs, city, and industrial.</dd>
+              <dd>Grow the single-city run into suburbs, city, and industrial zones.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Evidence</dt>
-              <dd>The technical brief records the engine tradeoff; the phased build guide and code preserve object-pooling, collision, and performance rules.</dd>
+              <dd>Play the beta — the city starts grey and fills with color as you run.</dd>
             </div>
           </dl>
           <div class="product-tags">
@@ -198,7 +196,6 @@
 
         <figure class="case-media portrait">
           <img src="images/product-studio/ultraviolette-splash.webp" alt="Ultraviolette character spreading a sparkling purple trail through a city changing from grey to colorful" width="900" height="1205" loading="lazy">
-          <figcaption>The splash art states the same game rule: Violette's movement leaves the city brighter than she found it.</figcaption>
         </figure>
       </div>
     </section>
@@ -221,28 +218,27 @@
           <dl class="case-proof">
             <div class="case-proof-row">
               <dt>Decision</dt>
-              <dd>Ship the game standalone and full-screen rather than carrying tabs, ads UI, and platform navigation into the public experience.</dd>
+              <dd>Ship it as a full-screen game only. No tabs, no ads chrome, no platform shell getting in the way.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Shipped result</dt>
-              <dd>A game-only React and Vite wrapper that preserves the working vanilla JavaScript planet core and exposes only its progression and interaction controls.</dd>
+              <dd>A small React shell around the working planet toy — greet it, spin it, generate another world.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Deferred</dt>
-              <dd>Tabs, ads, and platform chrome stayed out of the standalone release.</dd>
+              <dd>Tabs, ads, and platform UI stayed out of the public release.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Next release</dt>
-              <dd>Convert the remaining game modules to React and TypeScript gradually, without rewriting the working game core all at once.</dd>
+              <dd>Move remaining game modules into React gradually, without rewriting the working core all at once.</dd>
             </div>
             <div class="case-proof-row">
               <dt>Evidence</dt>
-              <dd>The migration and final-setup documents explicitly call for “just your game”; the standalone lifecycle stub and full-screen container implement that boundary.</dd>
+              <dd>Open Hello Whirled — three actions, full screen, nothing else competing for attention.</dd>
             </div>
           </dl>
           <div class="product-tags">
             <span class="product-tag">React</span>
-            <span class="product-tag">TypeScript</span>
             <span class="product-tag">Three.js</span>
             <span class="product-tag">Procedural 3D</span>
           </div>
@@ -253,34 +249,7 @@
 
         <figure class="case-media logo">
           <img src="images/product-studio/hello-whirled-mark.webp" alt="Hello Whirled astronauts hugging a smiling planet above the product title" width="680" height="1020" loading="lazy">
-          <figcaption>The identity turns the interaction model into one image: a small, friendly encounter with a new world.</figcaption>
         </figure>
-      </div>
-    </section>
-
-    <section class="release-section" aria-labelledby="release-title">
-      <p class="studio-section-kicker">Release log</p>
-      <h2 class="studio-section-title" id="release-title">What shipped, and when</h2>
-      <p class="studio-section-intro">
-        Dates come from commit history — from planned phase to something you
-        could open.
-      </p>
-      <div class="release-log">
-        <article class="release-item">
-          <time datetime="2026-01-20">Jan 20&ndash;27, 2026</time>
-          <strong>Ultraviolette phased build</strong>
-          <p>Scene foundation, runner loop, infection shader, and collision polish landed as distinct phases. Listed as Live Beta on Mar 11.</p>
-        </article>
-        <article class="release-item">
-          <time datetime="2026-03-02">Mar 2&ndash;10, 2026</time>
-          <strong>DateLight shipped and iterated</strong>
-          <p>Core UX, protected API integration, mobile/PWA work, and polish shipped across a short sequence. Listed live on Mar 4.</p>
-        </article>
-        <article class="release-item">
-          <time datetime="2026-03-07">Mar 7, 2026</time>
-          <strong>Hello Whirled listed live</strong>
-          <p>The focused planet toy joined the public Utility Infielder hub.</p>
-        </article>
       </div>
     </section>
 
@@ -314,11 +283,7 @@
       </div>
     </section>
 
-    <aside class="studio-cta" aria-labelledby="studio-cta-title">
-      <h2 id="studio-cta-title">Looking for the next program to help lead.</h2>
-      <p>
-        I'm interested in program management and creative/AI management roles.
-      </p>
+    <aside class="studio-cta" aria-label="Connect">
       <div class="hero-buttons">
         <a class="btn" href="https://www.linkedin.com/in/arthurjklein/" target="_blank" rel="noopener">Connect on LinkedIn</a>
         <a class="btn btn-secondary" href="https://utilityinfielder.com" target="_blank" rel="noopener">Visit Utility Infielder</a>

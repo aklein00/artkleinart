@@ -3,37 +3,37 @@ const galleryItems = [
     file: 'cg001_char_a.jpg',
     alt: 'Character - full turnaround and face closeup',
     caption: 'Character - Turnaround & Detail',
-    layoutClass: 'span-full',
+    layoutClass: 'square',
   },
   {
     file: 'cg001_char_b.jpg',
     alt: 'Character - bust shot detail',
     caption: 'Character - Face Detail',
-    layoutClass: 'tall',
+    layoutClass: 'square',
   },
   {
     file: 'cg001_char_c.jpg',
     alt: 'Character - full body turnaround',
     caption: 'Character - Full Body',
-    layoutClass: 'tall',
+    layoutClass: 'square',
   },
   {
     file: 'cg001_char_d.jpg',
     alt: 'Character - full body',
     caption: 'Character - Full Body',
-    layoutClass: 'tall',
+    layoutClass: 'square',
   },
   {
     file: 'cg001_char_e.jpg',
     alt: 'Character - full body turnaround with LOD',
     caption: 'Character - Turnaround + LOD',
-    layoutClass: 'tall',
+    layoutClass: 'square',
   },
   {
     file: 'cg001_char_f.jpg',
     alt: 'Character - texture variants showing style system',
     caption: 'Character Texture System - Two Variants',
-    layoutClass: 'span-full',
+    layoutClass: 'square',
   },
 ];
 

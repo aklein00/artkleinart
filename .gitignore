@@ -4,3 +4,4 @@ planning/
 # macOS
 .DS_Store
 src/favicon_source.psd
+.vercel

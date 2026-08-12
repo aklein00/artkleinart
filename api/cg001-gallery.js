@@ -3,7 +3,7 @@ const galleryItems = [
     file: 'cg001_char_a.jpg',
     alt: 'Character - full turnaround and face closeup',
     caption: 'Character - Turnaround & Detail',
-    layoutClass: 'square',
+    layoutClass: 'square contain',
   },
   {
     file: 'cg001_char_b.jpg',
@@ -21,7 +21,7 @@ const galleryItems = [
     file: 'cg001_char_d.jpg',
     alt: 'Character - full body',
     caption: 'Character - Full Body',
-    layoutClass: 'square',
+    layoutClass: 'square contain',
   },
   {
     file: 'cg001_char_e.jpg',

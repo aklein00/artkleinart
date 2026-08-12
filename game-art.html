@@ -528,6 +528,7 @@
     function renderCg001Gallery(access) {
       if (!cg001.root || !cg001.gallery || !cg001.heading) return;
 
+      const containFiles = new Set(['cg001_char_a.jpg', 'cg001_char_d.jpg']);
       const protectedGallery = access.gallery.map(item => ({
         src: getProtectedImageUrl(item.file, access.token),
         alt: item.alt,
@@ -540,6 +541,10 @@
         const figure = document.createElement('figure');
         const classes = ['img-card'];
         if (item.layoutClass) classes.push(...item.layoutClass.split(' '));
+        if (containFiles.has(item.file) && !classes.includes('contain')) {
+          classes.push('contain');
+        }
+        if (!classes.includes('square')) classes.push('square');
         figure.className = classes.join(' ');
         figure.dataset.gallery = 'cg001';
 

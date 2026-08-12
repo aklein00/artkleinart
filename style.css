@@ -617,6 +617,16 @@ h2.section-header {
   object-fit: cover;
 }
 
+/* Wide composites / tall full-bodies: show full frame inside the square */
+.protected-gallery .img-card.contain {
+  background: #5a5a5a;
+}
+
+.protected-gallery .img-card.contain img {
+  object-fit: contain;
+  background: transparent;
+}
+
 /* --- Product Studio --------------------------------------- */
 .studio-hero {
   padding: 32px 0 32px;

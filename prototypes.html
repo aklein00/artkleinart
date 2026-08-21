@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product Studio — Art Klein | Small Apps &amp; Games</title>
-  <meta name="description" content="DateLight, Ultraviolette, and Hello Whirled — small browser apps and games by Art Klein, with the scope calls and handoff notes behind each one.">
+  <meta name="description" content="Gateaux, DateLight, Ultraviolette, and Hello Whirled — small browser apps and games by Art Klein, with the scope calls and handoff notes behind each one.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -42,6 +42,23 @@
     </section>
 
     <section class="product-index" aria-label="Live projects">
+      <article class="product-card">
+        <div class="product-card-image">
+          <img src="images/product-studio/gateaux.webp" alt="Gateaux café interior with a pastry display case" width="1200" height="675">
+        </div>
+        <div class="product-card-body">
+          <div class="product-card-heading">
+            <h2>Gateaux</h2>
+            <span class="status-pill beta">Live Beta</span>
+          </div>
+          <p>A language-learning café where you bake cakes by completing lessons and serve customers in Spanish and French.</p>
+          <div class="product-card-links">
+            <a class="studio-link" href="#gateaux">Read case</a>
+            <a class="studio-link" href="https://gateaux.utilityinfielder.com/" target="_blank" rel="noopener">Play Gateaux &nearr;</a>
+          </div>
+        </div>
+      </article>
+
       <article class="product-card">
         <div class="product-card-image">
           <img src="images/product-studio/datelight.webp" alt="DateLight wordmark and lightbulb location-pin logo" width="992" height="360">
@@ -94,10 +111,64 @@
       </article>
     </section>
 
+    <section class="product-case" id="gateaux" aria-labelledby="gateaux-title">
+      <div class="product-case-heading">
+        <div>
+          <p class="studio-section-kicker">01 &middot; Learning loop</p>
+          <h2 id="gateaux-title">Gateaux</h2>
+        </div>
+        <span class="status-pill beta">Live Beta</span>
+      </div>
+      <p class="product-case-intro">
+        Teach practical café talk through a game loop: lesson equals bake,
+        serve equals practice.
+      </p>
+
+      <div class="product-case-layout">
+        <div>
+          <dl class="case-proof">
+            <div class="case-proof-row">
+              <dt>Decision</dt>
+              <dd>Skip the flashcard list. Five staff voices teach five speaking styles, and the café loop makes you use what you just learned.</dd>
+            </div>
+            <div class="case-proof-row">
+              <dt>Shipped result</dt>
+              <dd>A playable web beta with Spanish and French, display-case stock, short lessons, cafe counter, recipe book, and coins / diamonds / XP.</dd>
+            </div>
+            <div class="case-proof-row">
+              <dt>Deferred</dt>
+              <dd>Full illustrated asset pass, extra languages, and heavier audio. The loop ships first.</dd>
+            </div>
+            <div class="case-proof-row">
+              <dt>Next release</dt>
+              <dd>Art and content pass on the loop that already plays.</dd>
+            </div>
+            <div class="case-proof-row">
+              <dt>Evidence</dt>
+              <dd>Play the beta — complete a first-run lesson and put a cake in the case.</dd>
+            </div>
+          </dl>
+          <div class="product-tags">
+            <span class="product-tag">Language learning</span>
+            <span class="product-tag">Game loop</span>
+            <span class="product-tag">Vanilla JS</span>
+            <span class="product-tag">Vite</span>
+          </div>
+          <div class="case-actions">
+            <a class="btn" href="https://gateaux.utilityinfielder.com/" target="_blank" rel="noopener">Play Beta</a>
+          </div>
+        </div>
+
+        <figure class="case-media logo">
+          <img src="images/product-studio/gateaux-mark.webp" alt="Gateaux wordmark sticker with cakes, croissants, and coffee" width="900" height="860" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
     <section class="product-case" id="datelight" aria-labelledby="datelight-title">
       <div class="product-case-heading">
         <div>
-          <p class="studio-section-kicker">01 &middot; Product prioritization</p>
+          <p class="studio-section-kicker">02 &middot; Product prioritization</p>
           <h2 id="datelight-title">DateLight</h2>
         </div>
         <span class="status-pill">Live</span>
@@ -150,7 +221,7 @@
     <section class="product-case" id="ultraviolette" aria-labelledby="ultraviolette-title">
       <div class="product-case-heading">
         <div>
-          <p class="studio-section-kicker">02 &middot; Creative direction &amp; iteration</p>
+          <p class="studio-section-kicker">03 &middot; Creative direction &amp; iteration</p>
           <h2 id="ultraviolette-title">Ultraviolette</h2>
         </div>
         <span class="status-pill beta">Live Beta</span>
@@ -203,7 +274,7 @@
     <section class="product-case" id="hello-whirled" aria-labelledby="hello-whirled-title">
       <div class="product-case-heading">
         <div>
-          <p class="studio-section-kicker">03 &middot; Scope discipline</p>
+          <p class="studio-section-kicker">04 &middot; Scope discipline</p>
           <h2 id="hello-whirled-title">Hello Whirled</h2>
         </div>
         <span class="status-pill">Live</span>
@@ -253,6 +324,7 @@
       </div>
     </section>
 
+    <!--
     <section class="practice-section" aria-labelledby="practice-title">
       <p class="studio-section-kicker">How I work</p>
       <h2 class="studio-section-title" id="practice-title">Same five steps every time</h2>
@@ -282,6 +354,7 @@
         </div>
       </div>
     </section>
+    -->
 
     <aside class="studio-cta" aria-label="Connect">
       <div class="hero-buttons">

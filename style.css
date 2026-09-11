@@ -268,6 +268,7 @@ h2.section-header {
 }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
 .grid-auto { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .span-full { grid-column: 1 / -1; }
 
@@ -439,177 +440,42 @@ h2.section-header {
   flex-shrink: 0;
 }
 
-/* --- Protected portfolio sections ------------------------- */
-.protected-work {
+/* --- Company Game 001 character rows ---------------------- */
+.company-character-list {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  gap: 20px 28px;
-  align-items: start;
-  background: linear-gradient(135deg, #fffaf6, #f7f3ee);
-  border: 1px solid #ead8c8;
-  border-left: 4px solid #e07b39;
-  border-radius: 4px;
-  padding: 24px;
-  margin: 26px 0 28px;
+  gap: 28px;
 }
 
-.protected-work-copy h2 {
-  font-size: 19px;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 8px;
+.company-character-row {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
 }
 
-.protected-work-copy p {
-  font-size: 13px;
-  color: #555;
-  line-height: 1.75;
+.company-character-row:first-child {
+  border-top: 0;
+  padding-top: 0;
 }
 
-.protected-kicker {
-  font-size: 11px !important;
-  font-weight: 600;
-  color: #b66a34 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.11em;
-  margin-bottom: 6px;
-}
-
-.protected-form {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(224, 123, 57, 0.2);
-  border-radius: 4px;
-  padding: 16px;
-}
-
-.protected-form label {
-  display: block;
-  font-size: 12px;
-  font-weight: 600;
-  color: #555;
-  margin-bottom: 8px;
-}
-
-.protected-form-row {
-  display: flex;
-  gap: 8px;
-}
-
-.protected-form input {
-  flex: 1;
-  min-width: 0;
-  border: 1px solid #d8c8bc;
-  border-radius: 3px;
-  color: #333;
-  font: inherit;
-  font-size: 14px;
-  padding: 10px 11px;
-}
-
-.protected-form input:focus {
-  border-color: #e07b39;
-  outline: 2px solid rgba(224, 123, 57, 0.16);
-  outline-offset: 1px;
-}
-
-.protected-form button {
-  border: 0;
-  border-radius: 3px;
-  background: #e07b39;
-  color: #fff;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0 16px;
-  text-transform: uppercase;
-  transition: background 0.15s, opacity 0.15s;
-}
-
-.protected-form button:hover { background: #c8692a; }
-.protected-form button:disabled {
-  cursor: default;
-  opacity: 0.65;
-}
-
-.protected-helper,
-.protected-message {
-  font-size: 12px;
-  color: #888;
-  line-height: 1.5;
-  margin-top: 9px;
-}
-
-.protected-message.success { color: #4f7a39; }
-.protected-message.error { color: #b94a3a; }
-
-.protected-teaser-grid {
-  grid-column: 1 / -1;
+.company-character-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-}
-
-.protected-teaser-card {
-  min-height: 118px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.62);
-  border: 1px solid rgba(80, 60, 45, 0.1);
-  border-radius: 4px;
-  color: #8f7b6b;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.protected-teaser-shape {
-  width: 42px;
-  height: 64px;
-  display: block;
-  background:
-    radial-gradient(circle at 50% 17%, rgba(80, 60, 45, 0.3) 0 11px, transparent 12px),
-    linear-gradient(rgba(80, 60, 45, 0.28), rgba(80, 60, 45, 0.1));
-  border-radius: 22px 22px 11px 11px;
-  filter: blur(0.2px);
-  opacity: 0.7;
-}
-
-.protected-work.is-unlocked .protected-teaser-grid,
-.protected-work.is-unlocked .protected-form label,
-.protected-work.is-unlocked .protected-form-row,
-.protected-work.is-unlocked .protected-helper {
-  display: none;
-}
-
-.protected-gallery-heading {
-  margin-top: 30px;
-}
-
-/* Unlocked CG001 lineup: fixed 3×2 square tiles */
-.protected-gallery.grid-3 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.protected-gallery .img-card {
+.company-character-grid .img-card {
   aspect-ratio: 1 / 1;
   min-height: 0;
 }
 
-.protected-gallery .img-card.span-full,
-.protected-gallery .img-card.tall,
-.protected-gallery .img-card.wide,
-.protected-gallery .img-card.short {
+.company-character-grid .img-card.span-full,
+.company-character-grid .img-card.tall,
+.company-character-grid .img-card.wide,
+.company-character-grid .img-card.short {
   grid-column: auto;
   min-height: 0;
 }
 
-.protected-gallery .img-card img {
+.company-character-grid .img-card img {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -618,13 +484,70 @@ h2.section-header {
 }
 
 /* Wide composites / tall full-bodies: show full frame inside the square */
-.protected-gallery .img-card.contain {
+.company-character-grid .img-card.contain {
   background: #5a5a5a;
 }
 
-.protected-gallery .img-card.contain img {
+.company-character-grid .img-card.contain img {
   object-fit: contain;
   background: transparent;
+}
+
+/* --- Horizon Worlds asset gallery ------------------------- */
+.horizon-outfit-grid {
+  align-items: start;
+}
+
+.horizon-outfit-grid .img-card {
+  min-height: 0;
+  aspect-ratio: 1651 / 1161;
+  background: transparent;
+}
+
+.horizon-outfit-grid .img-card img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: transparent;
+}
+
+.horizon-wearables-grid .img-card {
+  min-height: 0;
+  aspect-ratio: 1651 / 1161;
+  background: #292929;
+}
+
+.horizon-wearables-grid .img-card.contain img {
+  object-fit: cover;
+  object-position: center;
+  background: transparent;
+}
+
+.horizon-crop-grid .img-card {
+  min-height: 0;
+  aspect-ratio: 1651 / 1161;
+}
+
+.horizon-crop-grid .img-card.contain img,
+.horizon-crop-grid .img-card img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-count {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  z-index: 1;
+  padding: 3px 7px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.72);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  pointer-events: none;
 }
 
 /* --- Product Studio --------------------------------------- */
@@ -1014,18 +937,10 @@ hr.divider {
     order: -1;
   }
 
-  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
 
-  .protected-gallery.grid-3 {
+  .company-character-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .protected-work {
-    grid-template-columns: 1fr;
-  }
-
-  .protected-teaser-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .product-index {
@@ -1080,9 +995,14 @@ hr.divider {
   .hero-images { height: 180px; }
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
 
-  .protected-gallery.grid-3 {
-    grid-template-columns: repeat(2, 1fr);
+  .company-character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .horizon-world-grid {
+    max-width: none;
   }
 
   .img-card.tall { min-height: 240px; }
@@ -1136,18 +1056,6 @@ hr.divider {
 
   .studio-cta {
     padding: 24px 20px;
-  }
-
-  .protected-work {
-    padding: 18px;
-  }
-
-  .protected-form-row {
-    flex-direction: column;
-  }
-
-  .protected-form button {
-    min-height: 40px;
   }
 
   .site-footer { padding: 24px 0; }

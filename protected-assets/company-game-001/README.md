@@ -1,8 +1,8 @@
-# Company Game 001 Protected Assets
+# Company Game 001 Gallery Assets
 
-Place the protected Series Entertainment images in this folder.
+These Series Entertainment images are displayed publicly on the Game Art page.
 
-The gallery manifest currently expects:
+The gallery currently contains:
 
 - `cg001_char_a.jpg`
 - `cg001_char_b.jpg`
@@ -10,5 +10,3 @@ The gallery manifest currently expects:
 - `cg001_char_d.jpg`
 - `cg001_char_e.jpg`
 - `cg001_char_f.jpg`
-
-To add or remove images, update the list in `api/cg001-gallery.js`.

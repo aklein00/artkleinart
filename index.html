@@ -66,133 +66,46 @@
 
     <!-- ── Selected Work ─────────────────────────────────────── -->
     <div class="section-label">Selected Work</div>
-    <div class="section-subtitle">EA · Meta · Nifty Games · Series Entertainment</div>
 
-    <!-- Row 1: Character Art -->
-    <div class="row-label">Character Art — Selected Work</div>
+    <div class="home-paths">
+      <a class="home-path" href="game-art.html">
+        <div class="home-path-image">
+          <img src="images/horizon-worlds/outfit-three-piece-suit-board.jpg" alt="Horizon Worlds three-piece suits and Oxford shoe variants" loading="lazy">
+        </div>
+        <div class="home-path-body">
+          <div class="home-path-meta">Characters · Costumes · Worlds</div>
+          <h2>Game Art</h2>
+          <p>Stylized characters, game-ready models, costume production, and world building across AAA, mobile, and emerging platforms.</p>
+          <span class="home-path-cta">Explore Game Art &rarr;</span>
+        </div>
+      </a>
 
-    <div class="img-grid grid-3">
+      <a class="home-path" href="art-direction.html">
+        <div class="home-path-image">
+          <img src="images/imgi_25_nflclash-keyart-horz-finish_orig.jpg" alt="NFL Clash key art featuring two football players" loading="lazy">
+        </div>
+        <div class="home-path-body">
+          <div class="home-path-meta">Direction · UI · Live Ops</div>
+          <h2>Art Direction</h2>
+          <p>Visual development, team direction, UI systems, live operations, and licensed campaigns for NBA Clash and NFL Clash.</p>
+          <span class="home-path-cta">Explore Art Direction &rarr;</span>
+        </div>
+      </a>
 
-      <figure class="img-card tall">
-        <img
-          src="images/sims4_boba_lg.jpg"
-          alt="Boba Fett — The Sims 4 Star Wars collaboration"
-          loading="lazy">
-        <div class="img-caption-overlay">The Sims 4 — EA Maxis</div>
-      </figure>
-
-      <figure class="img-card tall">
-        <img
-          src="images/imgi_12_sims4_oracle_lineup.jpg"
-          alt="Oracle costume — The Sims 4"
-          loading="lazy">
-        <div class="img-caption-overlay">The Sims 4 — EA Maxis</div>
-      </figure>
-
-      <figure class="img-card tall">
-        <img
-          src="images/imgi_10_sims4_spartan_lineup.jpg"
-          alt="Spartan/centurion outfit set — The Sims 4"
-          loading="lazy">
-        <div class="img-caption-overlay">The Sims 4 — EA Maxis</div>
-      </figure>
-
-      <figure class="img-card">
-        <img
-          src="images/horizon-worlds/hair-curly-long.jpg"
-          alt="Curly and textured hair sculpts for Horizon Worlds avatars"
-          loading="lazy">
-        <div class="img-caption-overlay">Horizon Worlds — Meta</div>
-      </figure>
-
-      <figure class="img-card">
-        <img
-          src="images/imgi_1_hairstudy0817-orig.png"
-          alt="Stylized hair sculpt study — character art, Pocket Gems"
-          loading="lazy">
-        <div class="img-caption-overlay">Character Art — Pocket Gems</div>
-      </figure>
-
-      <figure class="img-card">
-        <img
-          src="images/imgi_21_facewiprender-orig_orig.png"
-          alt="Face sculpt — character art, Pocket Gems"
-          loading="lazy">
-        <div class="img-caption-overlay">Character Art — Pocket Gems</div>
-      </figure>
-
-    </div>
-
-    <!-- Row 2: Art Direction -->
-    <div class="row-label">Art Direction — Directed &amp; Creative Lead</div>
-
-    <div class="img-grid grid-2">
-
-      <figure class="img-card tall">
-        <img
-          src="images/imgi_29_lineup01b_orig.jpg"
-          alt="NBA Clash character lineup"
-          loading="lazy">
-        <div class="img-caption-overlay">NBA Clash — Art Direction</div>
-      </figure>
-
-      <figure class="img-card tall">
-        <img
-          src="images/imgi_34_nbac-ingamecardstates_orig.png"
-          alt="NBA Clash in-game card states and expressions"
-          loading="lazy">
-        <div class="img-caption-overlay">NBA Clash — Art Direction</div>
-      </figure>
-
-      <figure class="img-card">
-        <img
-          src="images/imgi_35_nba-mainmenu-entrypoints_orig.png"
-          alt="NBA Clash main menu and arena UI"
-          loading="lazy">
-        <div class="img-caption-overlay">NBA Clash — Art Direction</div>
-      </figure>
-
-      <figure class="img-card">
-        <img
-          src="images/imgi_25_nflclash-keyart-horz-finish_orig.jpg"
-          alt="NFL Clash key art — horizontal finish"
-          loading="lazy">
-        <div class="img-caption-overlay">NFL Clash — Art Direction</div>
-      </figure>
-
+      <a class="home-path" href="prototypes.html">
+        <div class="home-path-image">
+          <img src="images/product-studio/gateaux.webp" alt="Gateaux language-learning café interior" loading="lazy">
+        </div>
+        <div class="home-path-body">
+          <div class="home-path-meta">Apps · Games · Prototypes</div>
+          <h2>Product Studio</h2>
+          <p>Small games and apps built from concept to live product using modern tools, fast iteration, and a strong visual point of view.</p>
+          <span class="home-path-cta">Visit Product Studio &rarr;</span>
+        </div>
+      </a>
     </div>
 
   </main>
-
-  <!-- Lightbox -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button id="lightbox-close" aria-label="Close">&times;</button>
-    <img id="lightbox-img" src="" alt="">
-  </div>
-
-  <script>
-    const lightbox = document.getElementById('lightbox');
-    const lbImg    = document.getElementById('lightbox-img');
-
-    document.querySelectorAll('.img-card img').forEach(img => {
-      img.addEventListener('click', () => {
-        lbImg.src = img.src;
-        lbImg.alt = img.alt;
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-
-    function closeLightbox() {
-      lightbox.classList.remove('open');
-      lbImg.src = '';
-      document.body.style.overflow = '';
-    }
-
-    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
@@ -200,6 +113,7 @@
       <div class="footer-links">
         <a href="game-art.html">Game Art</a>
         <a href="art-direction.html">Art Direction</a>
+        <a href="prototypes.html">Product Studio</a>
         <a href="https://www.linkedin.com/in/arthurjklein/" target="_blank" rel="noopener">Resume</a>
         <a href="https://www.linkedin.com/in/arthurjklein/" target="_blank" rel="noopener" class="footer-linkedin">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">

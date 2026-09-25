@@ -210,6 +210,92 @@ img { max-width: 100%; display: block; }
   margin-bottom: 10px;
 }
 
+/* --- Homepage portfolio paths ----------------------------- */
+.home-paths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.home-path {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e5e1dd;
+  border-radius: 5px;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.home-path:hover,
+.home-path:focus-visible {
+  border-color: #d9b394;
+  box-shadow: 0 14px 30px rgba(71, 49, 32, 0.10);
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+
+.home-path-image {
+  height: 190px;
+  overflow: hidden;
+  background: #262626;
+}
+
+.home-path-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.home-path:hover .home-path-image img { transform: scale(1.025); }
+
+.home-path-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 215px;
+  padding: 22px;
+}
+
+.home-path-meta {
+  margin-bottom: 9px;
+  color: #999;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.home-path h2 {
+  margin-bottom: 9px;
+  color: #222;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.home-path p {
+  margin-bottom: 24px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.home-path-cta {
+  margin-top: auto;
+  color: #c8692a;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 /* --- Project page headings -------------------------------- */
 h1.page-title {
   font-size: 26px;
@@ -939,6 +1025,18 @@ hr.divider {
 
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
 
+  .home-paths { grid-template-columns: 1fr; }
+
+  .home-path {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
+  }
+
+  .home-path-image {
+    height: auto;
+    min-height: 240px;
+  }
+
   .company-character-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -996,6 +1094,15 @@ hr.divider {
 
   .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .home-path { display: flex; }
+
+  .home-path-image {
+    height: 190px;
+    min-height: 0;
+  }
+
+  .home-path-body { min-height: 0; }
 
   .company-character-grid {
     grid-template-columns: 1fr;

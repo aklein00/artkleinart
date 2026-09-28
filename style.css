@@ -434,6 +434,15 @@ h2.section-header {
 
 .img-card.tall { min-height: 280px; }
 .img-card.wide { min-height: 200px; }
+.img-card.standard-thumb {
+  aspect-ratio: 1100 / 781;
+  min-height: 0;
+}
+.img-card.standard-thumb img {
+  position: absolute;
+  inset: 0;
+}
+.img-card.standard-thumb.focus-top img { object-position: center 25%; }
 .img-card.square { aspect-ratio: 1 / 1; }
 .img-card.short { min-height: 160px; }
 

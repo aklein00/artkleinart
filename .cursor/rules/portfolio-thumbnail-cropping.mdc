@@ -1,0 +1,13 @@
+---
+description: Keep portfolio gallery thumbnails consistently sized and intentionally cropped
+alwaysApply: true
+---
+
+# Portfolio Thumbnail Cropping
+
+- Prioritize consistent thumbnail dimensions and clean grid alignment over displaying every source image in full.
+- Use the site's standard thumbnail class and `object-fit: cover` for portfolio gallery cards.
+- Adjust `object-position` when a crop needs art direction to keep the subject or focal point visible.
+- Use `object-fit: contain` only when the entire frame is essential, such as a texture sheet, technical breakdown, or explicit full-image presentation.
+- Do not introduce letterboxing merely to preserve a source image's full aspect ratio.
+- Verify new or replaced gallery images at desktop and mobile widths before considering the layout complete.

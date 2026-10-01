@@ -454,6 +454,7 @@ h2.section-header {
   inset: 0;
 }
 .img-card.square { aspect-ratio: 1 / 1; }
+.img-card.square.focus-head img { object-position: center top; }
 .img-card.short { min-height: 160px; }
 
 /* When image src is empty, show a placeholder */

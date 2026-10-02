@@ -36,6 +36,45 @@
   </header>
 
   <main class="page-content">
+    <section class="deck-carousel" aria-roledescription="carousel" aria-label="Featured projects">
+      <div class="deck-carousel-track">
+        <article class="deck-slide is-active" aria-roledescription="slide" aria-label="1 of 3">
+          <img class="deck-slide-image" src="images/product-studio/last-arcade-cover.jpg" alt="Title slide of the Last Arcade pitch deck" width="1600" height="900">
+          <div class="deck-slide-overlay">
+            <p class="deck-slide-kicker">Pitch deck</p>
+            <h2>Last Arcade</h2>
+            <a class="btn deck-link" href="" target="_blank" rel="noopener">View deck &nearr;</a>
+          </div>
+        </article>
+
+        <article class="deck-slide" aria-roledescription="slide" aria-label="2 of 3" aria-hidden="true">
+          <img class="deck-slide-image" src="images/product-studio/techno-bowl-cover.jpg" alt="Title slide of the Techno Bowl pitch deck" width="1600" height="900" loading="lazy">
+          <div class="deck-slide-overlay">
+            <p class="deck-slide-kicker">Pitch deck</p>
+            <h2>Techno Bowl</h2>
+            <a class="btn deck-link" href="" target="_blank" rel="noopener">View deck &nearr;</a>
+          </div>
+        </article>
+
+        <article class="deck-slide" aria-roledescription="slide" aria-label="3 of 3" aria-hidden="true">
+          <img class="deck-slide-image" src="images/product-studio/project-ocean.webp" alt="A manta ray gliding through sunlit water beneath a sailboat on the horizon" width="1280" height="720" loading="lazy">
+          <div class="deck-slide-overlay">
+            <p class="deck-slide-kicker">In development</p>
+            <h2>Project Ocean</h2>
+            <a class="btn deck-link" href="" target="_blank" rel="noopener">View deck &nearr;</a>
+          </div>
+        </article>
+      </div>
+
+      <button class="deck-carousel-arrow prev" type="button" aria-label="Previous slide">&lsaquo;</button>
+      <button class="deck-carousel-arrow next" type="button" aria-label="Next slide">&rsaquo;</button>
+      <div class="deck-carousel-dots" role="group" aria-label="Choose slide">
+        <button type="button" aria-label="Show Last Arcade" aria-current="true"></button>
+        <button type="button" aria-label="Show Techno Bowl"></button>
+        <button type="button" aria-label="Show Project Ocean"></button>
+      </div>
+    </section>
+
     <section class="studio-hero" aria-labelledby="studio-title">
       <h1 id="studio-title">Product Studio</h1>
       <p class="studio-lead">Small apps and games I make in my spare time.</p>
@@ -398,6 +437,70 @@
       <span class="footer-copy">&copy; 2026 Arthur Klein &middot; artkleinart.com</span>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var carousel = document.querySelector('.deck-carousel');
+      if (!carousel) return;
+      var slides = carousel.querySelectorAll('.deck-slide');
+      var dots = carousel.querySelectorAll('.deck-carousel-dots button');
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var current = 0;
+      var timer = null;
+      var paused = false;
+
+      carousel.querySelectorAll('.deck-slide-image').forEach(function (img) {
+        var markMissing = function () { img.closest('.deck-slide').classList.add('no-image'); };
+        if (img.complete && img.naturalWidth === 0) markMissing();
+        img.addEventListener('error', markMissing);
+      });
+
+      function show(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach(function (slide, i) {
+          var active = i === current;
+          slide.classList.toggle('is-active', active);
+          slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+          slide.querySelectorAll('a').forEach(function (a) { a.tabIndex = active ? 0 : -1; });
+        });
+        dots.forEach(function (dot, i) {
+          if (i === current) dot.setAttribute('aria-current', 'true');
+          else dot.removeAttribute('aria-current');
+        });
+      }
+
+      function start() {
+        if (reduceMotion || paused || timer) return;
+        timer = setInterval(function () { show(current + 1); }, 6000);
+      }
+
+      function stop() {
+        clearInterval(timer);
+        timer = null;
+      }
+
+      function restart() { stop(); start(); }
+
+      carousel.querySelector('.prev').addEventListener('click', function () { show(current - 1); restart(); });
+      carousel.querySelector('.next').addEventListener('click', function () { show(current + 1); restart(); });
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () { show(i); restart(); });
+      });
+
+      carousel.addEventListener('mouseenter', function () { paused = true; stop(); });
+      carousel.addEventListener('mouseleave', function () { paused = false; start(); });
+      carousel.addEventListener('focusin', function () { paused = true; stop(); });
+      carousel.addEventListener('focusout', function (e) {
+        if (!carousel.contains(e.relatedTarget)) { paused = false; start(); }
+      });
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop(); else start();
+      });
+
+      show(0);
+      start();
+    })();
+  </script>
 
 </body>
 </html>
